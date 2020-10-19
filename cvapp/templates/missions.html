@@ -1,0 +1,107 @@
+        <!-- SECTION4 : Missions spécifiques  -->
+        <div class="container blocgenerique">
+          <section class="col-sm-12 table-responsive">
+            <table class="table table-bordered table-striped table-condensed">
+              <caption>
+                <h2>Spécificités missions</h2>
+                <p><span class="badge badge-warning">Dev</span> : developpement de macros, passerelles, applications.<br>
+                <span class="badge badge-danger">Data</span> : nettoyage, modélisation et analyse d'une quantité de données importantes afin de faciliter une prise de décision.<br>
+                <span class="badge badge-info">Eng</span> : maillage, mise en données, éxecution et post-traitement de calculs élements-finis, souvent multi-physiques, donc multi-solveur.</p>
+              </caption>
+              <thead>
+                <tr>
+                  <th>Missions Clés</th>
+                  <th>Domaine</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <!-- DATA ENG  -->
+                {% if type!='Dev' %}
+                <tr>
+                  <td><p>Groupe SAFRAN projet de recherche CORRAC-EPICE<p></td>
+                  <td><span class="badge badge-info">Eng</span> <span class="badge badge-danger">Data</span></td>
+                  <td><p> Développement de méthodologies <strong>d’optimisations structurelles d’empilements composites</strong>.<br>
+                  Identification de solutions par <strong>lancement d’algorithmes génétiques</strong> sur le modèle automatisé</p></td>
+                </tr>
+                <tr>
+                  <td>SKF industries</td>
+                  <td><span class="badge badge-info">Eng</span> <span class="badge badge-danger">Data</span></td>
+                  <td> <strong>Calculs structurel</strong> sur coupelle supérieure d’amortisseur, sur poulie de galet tendeur (Topologie)<br>
+                  <strong>Data-mining de résultats (Plans d’expériences & méthode Monté-Carlo)</strong></td>
+                </tr>
+                <tr>
+                  <td>LIEBHERR Aerospace</td>
+                  <td><span class="badge badge-info">Eng</span> <span class="badge badge-danger">Data</span></td>
+                  <td> <strong>Calcul structurel</strong> sur accroches d’échangeur thermique de Boeing.(Morphing, Topologie) <br>
+                  <strong>Data-mining</strong> de résultats (plan d'expériences) </td>
+                </tr>
+                <tr>
+                  <td>PETZL</td>
+                  <td><span class="badge badge-info">Eng</span> <span class="badge badge-danger">Data</span></td>
+                  <td> <strong>optimisation structurelle</strong> d’un mousqueton (Topologie) <br>
+                  <strong>Datamining de résultats</strong> (Descente de gradient & recherche d'optimum global</td>
+                </tr>
+                {% endif %}
+
+                <!-- ALL -->
+                <tr>
+                  <td>Gaz Transport & Technigaz</td>
+                  <td><span class="badge badge-danger">Data</span> <span class="badge badge-warning">Dev</span> <span class="badge badge-info">Eng</span></td>
+                  <td>Intégration d’un workflow de <strong>calcul de densité d’isolation de cuve de transport de gaz</strong>.<br>
+                  <strong>Développement de passerelles</strong> inter-outils (parseur)<br>
+                  Lancement de <strong>plans d’expériences & Data-mining</strong> sur le modèle automatisé.
+                  </td>
+                </tr>
+
+                <!-- DATA DEV  -->
+                {% if type!='Eng' %}
+                <tr>
+                  <td>Auto-Entreprise</td>
+                  <td><span class="badge badge-warning">Dev</span> <span class="badge badge-danger">Data</span></td>
+                  <td> <strong>Développement d'algorithmes de trading</strong> automatisé avec utilisation de <strong>machine learning</strong> (méthodes Fuzzy logic / random decision forest / algorithmie génétique et réseau de  neurones)</td>
+                </tr>
+                <tr>
+                  <td>Auto-Entreprise</td>
+                  <td><span class="badge badge-warning">Dev</span> <span class="badge badge-danger">Data</span></td>
+                  <td> <strong>Développement d'indicateurs</strong> complexes et de screener d'aide au trading (plate-forme ProRealTime)</td>
+                </tr>
+                <tr>
+                  <td>Auto-Entreprise</td>
+                  <td><span class="badge badge-warning">Dev</span> <span class="badge badge-danger">Data</span></td>
+                  <td> <strong>Développement d'outils d'analyse de données</strong> (activité & comptabilité petits commerces) pour faciliter l'aide à la décision </td>
+                </tr>
+                {% endif %}
+
+                <!-- DATA DEV  -->
+                {% if type!='Data' %}
+                <tr>
+                  <td>Safran Aircraft Engines</td>
+                  <td><span class="badge badge-warning">Dev</span> <span class="badge badge-info">Eng</span></td>
+                  <td> <strong>Developpements</strong> d’automatisation de processus pour la mise en place des <strong>Ateliers CATIA Tubing et Electrical</strong></td>
+                </tr>
+                <tr>
+                  <td>Safran Aircraft Engines</td>
+                  <td><span class="badge badge-warning">Dev</span> <span class="badge badge-info">Eng</span><span class="badge badge-danger">Data</span></td>
+                  <td> Projet Descriptif de montage 3D : <strong>Étude, réalisation, mise en place, pilotage de développement, installation, formation, suivis, évolution de code</strong></td>
+                </tr>
+                <tr>
+                  <td>Safran Aircraft Engines</td>
+                  <td><span class="badge badge-warning">Dev</span> <span class="badge badge-info">Eng</span></td>
+                  <td> Réalisation de <strong>modèles CATIA paramétrés (rejouabilité automatique)</strong> pour service méthode.</td>
+                </tr>
+                {% endif %}
+
+                <!-- ENG  -->
+                {% if type=='Eng' or type=='all' %}                
+                <tr>
+                  <td>Safran Aircraft Engines</td>
+                  <td><span class="badge badge-info">Eng</span></td>
+                  <td> Taskforces : missions bureau d'études <strong>(Conceptions & calculs)</strong></td>
+                </tr>
+                {% endif %}
+              </tbody>
+            </table>
+          </section> 
+        </div>

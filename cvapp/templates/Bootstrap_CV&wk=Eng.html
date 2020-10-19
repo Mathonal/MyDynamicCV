@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+      <!-- SECTION PRINCIPALE   -->
+      <div class="container blocgenerique">
+        <section class="row" style="height: 55px;"> </section><!-- Empty box  -->
+        <!-- part 1 : PRESENTATION  -->
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 mt-50 border-bottom border-white">
+          <div class="col-md-10 nametitle"><h1><strong>Alexis Mathon</strong></h1> <h2> <a href="/CVdev">Développeur</a> / <span class="badge badge-info"><strong>Ingénieur</strong></span> / <a href="/CVdata">Data Analyst</a> </h2></div>
+          <div class="card-img col-md-2 d-none d-md-block"><img src="{{ url_for('static', filename='img/id1.png') }}" alt="id"></div>
+        </div>  
+        <!-- part 1-1 : texte presentation   -->
+      </div>
+
+      <!-- SECTION 2 : Grille COMPETENCES  -->
+      {% include 'skillgraph.html' %}
+      <!-- SECTION4 : Missions spécifiques  -->
+      {% include 'missions.html' %}
+
+      <!-- SECTION5 : PERSONNEL / Formulaire/adresse  -->
+      <div class="container blocgenerique">
+      <div class="row">
+        <div class="col-sm-8">
+        <div class="col-12 pb-2 mb-2"> <h2>Du coté personnel </h2> </div>
+        </div>
+
+        <div class="col-sm-4">
+            <address>
+            <p>Vous pouvez me contacter à cette adresse :</p>
+            <strong>Mathonal@gmail.com</strong><br>
+
+              2 residence de la Villeparc <br>
+              78310 Maurepas<br>
+            </address>
+            <form class="card p-1">
+              <legend class="card-title">Pour me contacter</legend>
+              <h4 class="card-subtitle mb-2 text-muted">Comment m'avez-vous trouvé ?</h4>
+              <fieldset>
+                <div class="radio">
+                  <label for="ami" class="radio">
+                    <input type="radio" name="origine" value="ami" id="ami">
+                    Par un CV papier 
+                  </label>
+                </div>
+                <div class="radio">
+                  <label for="web" class="radio">
+                    <input type="radio" name="origine" value="web" id="web">
+                    Sur le web 
+                  </label>
+                </div>
+                <div class="radio">
+                  <label for="hasard" class="radio">
+                    <input type="radio" name="origine" value="hasard" id="hasard">
+                    Par hasard 
+                  </label>
+                </div>
+                <div class="radio">
+                  <label for="autre" class="radio">
+                    <input type="radio" name="origine" value="autre" id="autre">
+                    Autre... 
+                  </label>
+                </div>
+                <label for="textarea">Votre message :</label>
+                  <textarea id="textarea" class="form-control" rows="4"></textarea>
+                  <p class="help-block">Vous pouvez agrandir la fenêtre</p>
+                <button class="btn btn-primary" type="submit">Envoyer</button>
+              </fieldset>
+            </form>
+        </div>
+      </div>
+    </div>
+
+{% endblock %}
