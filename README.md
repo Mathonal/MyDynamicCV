@@ -1,2 +1,2 @@
 # MyDynamicCV
-webdeisgn of CV with python flask
+webdesign of CV with python flask
