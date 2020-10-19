@@ -1,9 +1,10 @@
+# DOCKER IMAGE BUILD command :
 # docker build . -t delka/flask
-# docker run -it -p 5000:5000 -v /home/delka/work/Flask/dynaCV:/src delka/flask
+# DOCKER RUN command : (note : modify Sqlpopulate to true in local setup)
+# docker run -it -p 5000:5000 -v /home/delka/work/GitRepos/mydynamicCV:/src delka/flask
 
 FROM python:alpine
-
-# NO apt-get on alpine
+#nota : NO "apt-get" on alpine
 #RUN apk update && apk add sqlite3
 #RUN apk add --update sqlite
 

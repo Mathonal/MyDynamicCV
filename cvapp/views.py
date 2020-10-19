@@ -9,12 +9,13 @@ app.config.from_object('config')
 #Import cyclicity error if placed before App=
 from .utils import find_comp
 
+#INDEX DISPLAY
 @app.route('/')
 @app.route('/index/')
 def index():
-
     return render_template('index.html')
 
+#SPECIFIC DISPLAYS
 def rendercv(Wkclass):
     #Wkclass = 'Data'
     myUrl = 'Bootstrap_CV&wk='+Wkclass+'.html'
@@ -24,6 +25,7 @@ def rendercv(Wkclass):
                             type=Wkclass,
                             complist=complist)
 
+# DISPLAYS
 @app.route('/CVdata/')
 def datacv(): return rendercv('Data')
 

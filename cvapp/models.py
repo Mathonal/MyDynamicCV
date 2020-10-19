@@ -33,13 +33,6 @@ def init_db():
 
     init_compdb()
 
-    # db.session.add(CompGraph("TESTCOMP1", WorkClass['Data'],50))
-    # db.session.add(CompGraph("TESTCOMP2", WorkClass['Dev'],50))
-    # db.session.add(CompGraph("TESTCOMP3", WorkClass['Eng'],50))
-    # db.session.add(CompGraph("TESTCOMP4", WorkClass['DataDev'],50))
-    # db.session.add(CompGraph("TESTCOMP5", WorkClass['DataEng'],50))
-    # db.session.add(CompGraph("TESTCOMP6", WorkClass['DevEng'],50))    
-    # db.session.add(CompGraph("TESTCOMP7", WorkClass['DataDevEng'],50))
     db.session.commit()
     lg.warning('Database initialized!')
 
