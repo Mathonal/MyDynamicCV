@@ -1,6 +1,5 @@
 import os
 # Database initialization
-SQLPOPULATE_AT_STARTUP = False
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 #print(basedir)
