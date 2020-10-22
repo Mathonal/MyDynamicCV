@@ -1,6 +1,6 @@
-from .models import CompGraph, WorkClass
+from .models import WorkClass,CompGraph,CompGlob
 
-def find_comp(workclass):
+def find_tcomp(workclass):
     #look in DB and gets all item by workclass
     
     # All comp
@@ -22,4 +22,27 @@ def find_comp(workclass):
     complist += CompGraph.query.filter(
         CompGraph.wc == WorkClass[workclass]).all()
     #contents = Content.query.filter(Content.gender == Gender[gender]).all()
+    return complist
+
+
+def find_gcomp(workclass):
+    #look in DB and gets all item by workclass
+    #BASE 
+    complist = CompGlob.query.filter(
+        CompGlob.wc == WorkClass[workclass]).all()
+    # Do not want All comp
+    #complist = CompGraph.query.filter(
+    #    CompGraph.wc == WorkClass['DataDevEng']).all()
+    
+    #COMPOSE
+    if workclass == 'Data' or workclass == 'Dev':
+        complist += CompGlob.query.filter(
+            CompGlob.wc == WorkClass['DataDev']).all()
+    if workclass == 'Data' or workclass == 'Eng':
+        complist += CompGlob.query.filter(
+            CompGlob.wc == WorkClass['DataEng']).all()
+    if workclass == 'Dev' or workclass == 'Eng':
+        complist += CompGlob.query.filter(
+            CompGlob.wc == WorkClass['DevEng']).all()
+       
     return complist

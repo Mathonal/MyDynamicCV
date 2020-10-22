@@ -4,7 +4,7 @@ from flask import Flask
 from .views import app
 from . import models
 
-SQLPOPULATE_AT_STARTUP = False
+SQLPOPULATE_AT_STARTUP = True
 
 # Connect sqlalchemy to app
 models.db.init_app(app)
