@@ -64,46 +64,63 @@ def init_compgraphdb():
 class CompGlob(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(50), nullable=False)
+    img = db.Column(db.String(50), nullable=True)
     wc = db.Column(db.Enum(WorkClass), nullable=False)
     short = db.Column(db.String(200), nullable=False)
 
-    def __init__(self, name, workclass, short):
+    def __init__(self, name, workclass, short, img=None):
         self.name = name
         self.wc = workclass
         self.short = short
+        self.img = img
 
 def init_compglobdb():
     #MULTI COMP
     db.session.add(CompGlob("Audit de Processus", WorkClass['DataDevEng'],
         "Comprendre et analyser avec précision les besoins d'un client. \
-        Realiser des spécifications techniques détaillées."))
+        Realiser des spécifications techniques détaillées.",
+        "img/processus.png"))
 
     db.session.add(CompGlob("Etude de faisabilité & chiffrage", WorkClass['DataDevEng'],
         "Verifier la capacité des outils à remplir un besoin client; \
-        en chiffrer l'installation / l'execution."))
+        en chiffrer l'installation / l'execution.",
+        "img/faisabilite.png"))
 
     db.session.add(CompGlob("Pilotage projet", WorkClass['DataDevEng'],
-        "Suivre le developpement d'une application ou l'execution d'une étude"))
+        "Suivre le developpement d'une application ou l'execution d'une étude",
+        "img/pilotage.png"))
 
     db.session.add(CompGlob("Veille technologique", WorkClass['DataDevEng'],
         "Tenir ses compétences à jour. Surveiller le versionnement de ses \
-        produits et ceux de la concurrence"))
+        produits et ceux de la concurrence",
+        "img/veille.png"))
 
     db.session.add(CompGlob("Présentation ", WorkClass['DataDevEng'],
-        "Etre capable de rediger et présenter ses resultats via supports graphiques : Dashboard / powerpoint"))
+        "Etre capable de rediger et présenter ses resultats via supports graphiques : Dashboard / powerpoint",
+        "img/presentation.jpg"))
 
     db.session.add(CompGlob("Formation & encadrement ", WorkClass['DataDevEng'],
-        "Etre capable de rediger et dispenser des formations. Transmettre ses compétences "))
+        "Etre capable de rediger et dispenser des formations. Transmettre ses compétences",
+        "img/formation.jpg"))
 
     # Specific comp
     # Ing
     db.session.add(CompGlob("Expertise CATIA/CAO", WorkClass['Eng'],
-        "Etre capable de faire de la conception rejouable; Squeleton/topdown method. Manipulation surfacique avancée. \
-        Inclusion de règles/verifications de conception (Knowledge)"))
+        "Etre capable de faire de la conception rejouable; Squeleton/topdown method. \
+        Inclusion de règles/verifications de conception (Knowledge); surfacique avancée",
+        "img/catia.jpg"))
 
     db.session.add(CompGlob("Expertise Conception additive", WorkClass['Eng'],
-        "utilisation et interprétation d'optimisation topologique sur volume de conception"))
+        "Utilisation et interprétation d'optimisation topologique sur volume de conception",
+        "img/topologicaloptim.png"))
 
+    db.session.add(CompGlob("Expertise optimisation paramétrique", WorkClass['Eng'],
+        "Construction de workflows de calculs couplées à des algorithmes d'optimisation",
+        "img/optimparametriqueflow.png"))
+
+    db.session.add(CompGlob("Data Mining", WorkClass['Eng'],
+        "Exploration de domaine (Plan d'expériences) ; Choix d'algorithme & paramètres;  Data-Mining & Regression ; Insight paramètres principaux & effet de couplage ",
+        "img/surfacereponse.png"))
 
 
 def init_db():
