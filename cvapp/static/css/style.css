@@ -5,9 +5,18 @@
 
 .generalcompetenceblock {
   border: 1px solid black;
+  border-radius: 25px;
   padding: 30px 30px;
   margin-bottom: 30px;
-  height: 200px
+  height: 200px;
+  background-color: rgba(255, 255, 255, .7);
+}
+
+.blockimg {
+  border-radius: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 body {
@@ -19,6 +28,7 @@ body {
 
 .blocgenerique {
 	background-color: rgba(255, 255, 255, .7);
+  border-radius: 10px;
 	color: black;
 	padding-top: 1rem;padding-bottom: 1rem;margin-top : 1rem;margin-bottom: 1rem;
 }

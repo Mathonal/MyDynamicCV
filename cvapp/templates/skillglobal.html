@@ -12,9 +12,8 @@
 
             {% for comp in gcomplist %}
             <div class="col-lg-4 col-md-6">
-              <!-- <div {% if comp.img!=None: %} style='background-image: url({{comp.img}});background-size: cover;'{% endif %}>-->
-              <div {% if comp.img!=None: %} style='background-image: url("{{url_for("static", filename=comp.img) }}");background-size: contain;background-repeat: no-repeat;background-position: center;'{% endif %}>
-                <div class="generalcompetenceblock text-center" style='background-color: rgba(255, 255, 255, .7);'>
+              <div class="blockimg" {% if comp.img!=None: %} style= 'background-image: url("{{url_for("static", filename=comp.img) }}");'{% endif %}>
+                <div class="generalcompetenceblock text-center">
                   <h4>{{comp.name}}</h4>
                   <p>{{comp.short}}</p>
                 </div>
@@ -24,8 +23,3 @@
 
         </section>
       </div>
-
-
- <!--                   <div class="icontitle col-md-1 d-none d-md-block"> <img src="{{ url_for('static', filename='img/svg/users-cog.svg') }}" alt height="40" width="40"></div>
-
-  style='background-color: rgba(255, 255, 255, .5);'

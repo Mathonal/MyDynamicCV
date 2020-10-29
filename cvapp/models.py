@@ -122,6 +122,8 @@ def init_compglobdb():
         "Exploration de domaine (Plan d'expériences) ; Choix d'algorithme & paramètres;  Data-Mining & Regression ; Insight paramètres principaux & effet de couplage ",
         "img/surfacereponse.png"))
 
+    db.session.add(CompGlob("Data Mining", WorkClass['Eng'],
+        "Exploration de domaine (Plan d'expériences) ; Choix d'algorithme & paramètres;  Data-Mining & Regression ; Insight paramètres principaux & effet de couplage "))
 
 def init_db():
     db.drop_all()
