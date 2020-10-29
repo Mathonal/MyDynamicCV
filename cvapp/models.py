@@ -83,11 +83,11 @@ def init_compglobdb():
 
     db.session.add(CompGlob("Etude de faisabilité & chiffrage", WorkClass['DataDevEng'],
         "Verifier la capacité des outils à remplir un besoin client; \
-        en chiffrer l'installation / l'execution.",
+        en chiffrer l'installation / l'exécution.",
         "img/faisabilite.png"))
 
     db.session.add(CompGlob("Pilotage projet", WorkClass['DataDevEng'],
-        "Suivre le developpement d'une application ou l'execution d'une étude",
+        "Suivre le développement d'une application ou l'exécution d'une étude",
         "img/pilotage.png"))
 
     db.session.add(CompGlob("Veille technologique", WorkClass['DataDevEng'],
@@ -96,18 +96,18 @@ def init_compglobdb():
         "img/veille.png"))
 
     db.session.add(CompGlob("Présentation ", WorkClass['DataDevEng'],
-        "Etre capable de rediger et présenter ses resultats via supports graphiques : Dashboard / powerpoint",
+        "Etre capable de rédiger et présenter ses résultats via supports graphiques : Dashboard / powerpoint",
         "img/presentation.jpg"))
 
     db.session.add(CompGlob("Formation & encadrement ", WorkClass['DataDevEng'],
-        "Etre capable de rediger et dispenser des formations. Transmettre ses compétences",
+        "Etre capable de rédiger et dispenser des formations. Transmettre ses compétences",
         "img/formation.jpg"))
 
     # Specific comp
     # Ing
     db.session.add(CompGlob("Expertise CATIA/CAO", WorkClass['Eng'],
         "Etre capable de faire de la conception rejouable; Squeleton/topdown method. \
-        Inclusion de règles/verifications de conception (Knowledge); surfacique avancée",
+        Inclusion de règles/vérifications de conception (Knowledge); surfacique avancée",
         "img/catia.jpg"))
 
     db.session.add(CompGlob("Expertise Conception additive", WorkClass['Eng'],
@@ -119,16 +119,17 @@ def init_compglobdb():
         "img/optimparametriqueflow.png"))
 
     db.session.add(CompGlob("Data Mining", WorkClass['Eng'],
-        "Exploration de domaine (Plan d'expériences) ; Choix d'algorithme de calculs & paramètres;  Data-Mining & Regression ; Insight paramètres principaux & effet de couplage ",
+        "Exploration de domaine (Plan d'expériences) ; Choix d'algorithme de calculs & paramètres;\
+         Data-Mining & Regression ; Insight paramètres principaux & effet de couplage ",
         "img/surfacereponse.png"))
 
     # Specific comp
     # Data
     db.session.add(CompGlob("Python Advanced", WorkClass['Data'],
-        "Developpement objets & exploratoire (Jupyter) ; structures avancées / factorisation ; APIs",
+        "Développement objets & exploratoire (Jupyter) ; structures avancées / factorisation ; APIs",
         ""))
 
-    db.session.add(CompGlob("Maitrise Librairies Data-Science", WorkClass['Data'],
+    db.session.add(CompGlob("Maitrise librairies Data-Science", WorkClass['Data'],
         "Pandas ; Numpy ; SciKit Tensorflow ; Matplotlib SeaBorn",
         ""))
 
