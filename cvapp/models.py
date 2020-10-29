@@ -29,7 +29,7 @@ class CompGraph(db.Model):
 def init_compgraphdb():
     #MULTI COMP
     db.session.add(CompGraph("Python", WorkClass['DataDev'],95))
-    db.session.add(CompGraph("Microsoft Azure", WorkClass['DataDev'],75))
+    db.session.add(CompGraph("Microsoft Azure", WorkClass['DataDev'],65))
     db.session.add(CompGraph("CATIA Knowledge", WorkClass['DevEng'],95))
 
     #DATA COMP
@@ -119,11 +119,31 @@ def init_compglobdb():
         "img/optimparametriqueflow.png"))
 
     db.session.add(CompGlob("Data Mining", WorkClass['Eng'],
-        "Exploration de domaine (Plan d'expériences) ; Choix d'algorithme & paramètres;  Data-Mining & Regression ; Insight paramètres principaux & effet de couplage ",
+        "Exploration de domaine (Plan d'expériences) ; Choix d'algorithme de calculs & paramètres;  Data-Mining & Regression ; Insight paramètres principaux & effet de couplage ",
         "img/surfacereponse.png"))
 
-    db.session.add(CompGlob("Data Mining", WorkClass['Eng'],
-        "Exploration de domaine (Plan d'expériences) ; Choix d'algorithme & paramètres;  Data-Mining & Regression ; Insight paramètres principaux & effet de couplage "))
+    # Specific comp
+    # Data
+    db.session.add(CompGlob("Python Advanced", WorkClass['Data'],
+        "Developpement objets & exploratoire (Jupyter) ; structures avancées / factorisation ; APIs",
+        ""))
+
+    db.session.add(CompGlob("Maitrise Librairies Data-Science", WorkClass['Data'],
+        "Pandas ; Numpy ; SciKit Tensorflow ; Matplotlib SeaBorn",
+        ""))
+
+    db.session.add(CompGlob("Maitrise des outils BigData", WorkClass['Data'],
+        "Pipeline ETL / Dataflow ; Création de sets de données ordonnées à partir de DataLake (Spark,Sql,NoSql)",
+        ""))
+
+    db.session.add(CompGlob("Data Visualisation", WorkClass['Data'],
+        "Dashboard & Data story sous Tableau/Python/HTML reporting",
+        ""))
+
+    db.session.add(CompGlob("Maitrise outils Machine learning / Deep learning", WorkClass['Data'],
+        "Dashboard & Data story sous Tableau/Python/HTML reporting",
+        ""))
+
 
 def init_db():
     db.drop_all()

@@ -21,29 +21,47 @@
   </head>
 
   <body>
-      <!-- BARRE DE NAVIGATION   -->
-      <nav class="navbar fixed-top navbar-expand navbar-dark bg-dark justify-content-between flex-md-nowrap m-0">
-          <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="">ALEXIS MATHON</a>
-          <ul class="nav navbar-nav col-auto ">
-            <li class="nav-item active"> <a class="nav-link" href="/index">Accueil<span class="sr-only">(current)</span></a> </li>
+    <!-- BARRE DE NAVIGATION   -->
+    <nav class="navbar fixed-top navbar-expand navbar-dark bg-dark justify-content-between flex-md-nowrap m-0">
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="">ALEXIS MATHON</a>
+        <ul class="nav navbar-nav col-auto ">
+          <li class="nav-item active"> <a class="nav-link" href="/index">Accueil<span class="sr-only">(current)</span></a> </li>
 
-            <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Métiers</a>
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <a class="dropdown-item" href="/CVdata">Data</a>
-                <a class="dropdown-item" href="/CVdev">Développement</a>
-                <!--<div class="dropdown-divider"></div>-->
-                <a class="dropdown-item" href="/CVeng">Ingénierie</a>
-              </div>
-            </li>
-            
-            <li class="nav-item"> <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Expériences</a> </li>
-            <li> <a class="nav-link" href="#">Références</a> </li>
-          </ul>
-      </nav>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Métiers</a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+              <a class="dropdown-item" href="/CVdata">Data</a>
+              <a class="dropdown-item" href="/CVdev">Développement</a>
+              <!--<div class="dropdown-divider"></div>-->
+              <a class="dropdown-item" href="/CVeng">Ingénierie</a>
+            </div>
+          </li>
+          
+          <li class="nav-item"> <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Expériences</a> </li>
+          <li> <a class="nav-link" href="#">Références</a> </li>
+        </ul>
+    </nav>
+
+    <!-- SECTION PRINCIPALE PESENTATION  -->
+    <div class="container blocgenerique">
+      <section class="row" style="height: 55px;"> </section><!-- Empty box  -->
+      <!-- part 1 : PRESENTATION  -->
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 mt-50 border-bottom border-white">
+        <div class="col-6 col-md-8 nametitle"><h1><strong>Alexis Mathon</strong></h1>
+          <h2> 
+              {% if type=='Data' %} <span class="badge badge-danger"><strong>Data Analyst</strong></span> {% else %} <a href="/CVdata">Data Analyst</a> {% endif %}/
+              {% if type=='Dev' %} <span class="badge badge-warning"><strong>Développeur</strong></span> {% else %} <a href="/CVdev">Développeur</a> {% endif %}/ 
+              {% if type=='Eng' %} <span class="badge badge-info"><strong>Ingénieur</strong></span> {% else %} <a href="/CVeng">Ingénieur</a> {% endif %}
+          </h2>
+          <div class="icontitle col-md-1 d-none d-md-block"> <img src="{{ url_for('static', filename='img/svg/click.svg') }}" alt height="40" width="40"></div>
+        </div>
+        <div class="icontitle col-6 col-md-3 col-lg-2 align-items-end">
+          <a href="https://github.com/Mathonal"> <img src="{{ url_for('static', filename='img/github.png') }}" alt height="40" ></a>
+          <a href="https://www.linkedin.com/in/alexis-mathon-49989639/"> <img src="{{ url_for('static', filename='img/linkedin.png') }}" alt height="40" ></a>
+        </div>
+        <div class="card-img col-md-3 col-lg-2 d-none d-md-block"><img src="{{ url_for('static', filename='img/id1.png') }}" alt="id" style='border-radius: 15px;'></div>
+      </div>
 
 
-
-      <!-- SECTION PRINCIPALE   -->
     {% block content %}{% endblock %}
 
 

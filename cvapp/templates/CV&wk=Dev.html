@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+        <!-- SECTION 1 part 2 : texte presentation   -->
+        <div class="row d-flex col-lg-12 pb-2 mb-3">
+            <div class="text-center">
+                <p> Je pratique le codage et l'algorithmie depuis ma formation d'ingénieur : le besoin de passerelles de données / parseurs / excels automatisés à toujours existé en simulation numérique.<br>
+
+                Mes languages de prédilection sont <strong>Python</strong> (en lien avec la data science) et <strong>.net/VB</strong> (plusieurs développements à mon actif en ingénierie)<br><br>
+
+                J'aime apprendre de nouveaux languages ; <br>mes prochains objectifs sont <strong>R</strong> (pour la data science) et <strong>Js React </strong>(pour améliorer l'aspect interface utilisateur / APIs & webbing en général)<br><br>
+
+                Dernièrement, je développe mes compétences sur <strong>MicrosoftAzureCloud</strong>, les GUI sous Python (developpement d'apps), et le Web design (pour améliorer les reportings Data)
+                </p>
+            </div>
+        </div>
+      </div>
+
+      <!-- SECTION 2 : Grille COMPETENCES  -->
+      {% include 'skillgraph.html' %}
+      <!-- SECTION : Compétences globales   -->
+      {% if gcomplist: %} {% include 'skillglobal.html' %} {% endif %}
+      <!-- SECTION4 : Missions spécifiques  -->
+      {% include 'missions.html' %}
+
+      <!-- SECTION5 : PERSONNEL / Formulaire/adresse  -->
+      {% include 'persocontact.html' %}
+
+{% endblock %}

@@ -22,7 +22,7 @@ def index():
 #SPECIFIC DISPLAYS
 def rendercv(Wkclass):
     #Wkclass = 'Data'
-    myUrl = 'Bootstrap_CV&wk='+Wkclass+'.html'
+    myUrl = 'CV&wk='+Wkclass+'.html'
 
     tcomplist = find_tcomp(Wkclass)
     gcomplist = find_gcomp(Wkclass)

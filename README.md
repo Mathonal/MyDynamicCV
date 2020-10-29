@@ -39,7 +39,7 @@ this allow to modify app.db file content on the fly via MODELS.py
 
 
 ### TEMPLATE FOLDER:
-**index.html, Bootstrap_CV&wk=Data.html, Bootstrap_CV&wk=Eng.html, Bootstrap_CV&wk=Dev.html** : *4 main pages of the CV.* Calls to all following HTML cards when rendered with views.py
+**index.html, CV&wk=Data.html, CV&wk=Eng.html, CV&wk=Dev.html** : *4 main pages of the CV.* Calls to all following HTML cards when rendered with views.py
 
 **base.html (card)** : contains header and footer layout of pages
 
