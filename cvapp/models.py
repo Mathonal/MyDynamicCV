@@ -1,10 +1,8 @@
 from flask_sqlalchemy import SQLAlchemy
-import logging as lg
+import logging
 import enum
 
-from .views import app
-# Create database connection object
-db = SQLAlchemy(app)
+from . import db
 
 class WorkClass(enum.Enum):
     Data = 1
@@ -145,8 +143,8 @@ def init_compglobdb():
         "Dashboard & Data story sous Tableau/Python/HTML reporting",
         ""))
 
-
 def init_db():
+    logging.warning('repopulating SQLDB')
     db.drop_all()
     db.create_all()
 
@@ -154,4 +152,4 @@ def init_db():
     init_compglobdb()
 
     db.session.commit()
-    lg.warning('Database initialized!')
+    logging.warning('Database initialized!')

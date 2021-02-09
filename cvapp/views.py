@@ -1,17 +1,18 @@
 from flask import Flask, render_template, url_for
+from flask import Blueprint
 
-app = Flask(__name__)
-
-# Config options - Make sure you created a 'config.py' file.
-app.config.from_object('config')
-# To get one variable, tape app.config['MY_VARIABLE']
-
-#Import cyclicity error if placed before App=
 from .utils import find_tcomp,find_gcomp
 
+# Blueprint
+routes = Blueprint('routes', __name__,
+        template_folder='templates',
+        static_folder='static',
+        static_url_path='/static')
+
+
 #INDEX DISPLAY
-@app.route('/')
-@app.route('/index/')
+@routes.route('/')
+@routes.route('/index/')
 def index():
 
     gcomplist = find_gcomp('DataDevEng')
@@ -33,11 +34,11 @@ def rendercv(Wkclass):
                             gcomplist=gcomplist)
 
 # DISPLAYS
-@app.route('/CVdata/')
+@routes.route('/CVdata/')
 def datacv(): return rendercv('Data')
 
-@app.route('/CVdev/')
+@routes.route('/CVdev/')
 def devcv():return rendercv('Dev')
 
-@app.route('/CVeng/')
+@routes.route('/CVeng/')
 def engcv():return rendercv('Eng')

@@ -1,4 +1,7 @@
+# MANDATORY
+python-dotenv
+#
 flask
+flask_mail
 flask_sqlalchemy
 pysqlite3
-gunicorn==19.9.0
