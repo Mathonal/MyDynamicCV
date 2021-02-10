@@ -1,0 +1,31 @@
+{% set type='all' %}
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="row" style="height: 50px;"> </section><!-- Empty box  -->
+    <!-- SECTION Titre Image   -->
+    <div class="container blocgenerique text-center">
+        <div class="col-md-11 "><h1> Nom Article </h1> </div>
+        <img src="{{ url_for('static', filename='img/thumb/basics_ml.png') }}" alt="Card image cap">
+    </div>
+      <!-- SECTION 2 : Grille COMPETENCES  -->
+    <div class="container blocgenerique">
+    <section class="row text-center">
+      <div class="row col-12 pb-2 mt-2">
+        <div class="col-md-11 text-center"><h2> Titre de partie </h2> </div>
+      </div>
+      <div class="container">
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!</p>
+        <img class="text-center" src="{{ url_for('static', filename='img/thumb/basics_ml.png') }}" alt="Card image cap">
+        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!</p>
+      </div>
+    </section>
+</div>
+      <!-- SECTION : Compétences globales   -->
+
+      <!-- SECTION5 : PERSONNEL / Formulaire/adresse  -->
+      <!--{% include 'bloc_persocontact.html' %}-->
+
+
+{% endblock %}

@@ -8,8 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- mobile screen conf -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto|Squada+One&display=swap" rel="stylesheet">
 
+    <!--
+   	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet"> -->
 
-   	<link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
     <!-- <link href="{{ url_for('static', filename='css/grid_display.css') }}" rel="stylesheet">-->
    	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -25,64 +28,51 @@
     <nav class="navbar fixed-top navbar-expand navbar-dark bg-dark justify-content-between flex-md-nowrap m-0">
         <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="">ALEXIS MATHON</a>
         <ul class="nav navbar-nav col-auto ">
-          <li class="nav-item active"> <a class="nav-link" href="/index">Accueil<span class="sr-only">(current)</span></a> </li>
-
-          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Métiers</a>
+          <li class="nav-item active"> <a class="nav-link" href="/index">HOME<span class="sr-only">(current)</span></a> </li>
+          
+          <li class="nav-item"> <a class="nav-link" href="/blog" tabindex="-1" aria-disabled="true">BLOG</a> </li>
+          <li> <a class="nav-link" href="#">PROJETS</a> </li>
+          <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="/Me">A PROPOS DE MOI</a>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <a class="dropdown-item" href="/CVdata">Data</a>
-              <a class="dropdown-item" href="/CVdev">Développement</a>
+              <a class="dropdown-item" href="/Me">Le Consultant</a>
+              <a class="dropdown-item" href="/CVdata">Le Data Analyst</a>
+              <a class="dropdown-item" href="/CVdev">Le Développeur</a>
               <!--<div class="dropdown-divider"></div>-->
-              <a class="dropdown-item" href="/CVeng">Ingénierie</a>
+              <a class="dropdown-item" href="/CVeng">L'Ingénieur</a>
             </div>
           </li>
-          
-          <li class="nav-item"> <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Expériences</a> </li>
-          <li> <a class="nav-link" href="#">Références</a> </li>
         </ul>
     </nav>
 
-    <!-- SECTION PRINCIPALE PESENTATION  -->
-    <div class="container blocgenerique">
-      <section class="row" style="height: 55px;"> </section><!-- Empty box  -->
-      <!-- part 1 : PRESENTATION  -->
-      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 mt-50 border-bottom border-white">
-        <div class="col-6 col-md-8 nametitle"><h1><strong>Alexis Mathon</strong></h1>
-          <h2> 
-              {% if type=='Data' %} <span class="badge badge-danger"><strong>Data Analyst</strong></span> {% else %} <a href="/CVdata">Data Analyst</a> {% endif %}/
-              {% if type=='Dev' %} <span class="badge badge-warning"><strong>Développeur</strong></span> {% else %} <a href="/CVdev">Développeur</a> {% endif %}/ 
-              {% if type=='Eng' %} <span class="badge badge-info"><strong>Ingénieur</strong></span> {% else %} <a href="/CVeng">Ingénieur</a> {% endif %}
-          </h2>
-          <div class="icontitle col-md-1 d-none d-md-block"> <img src="{{ url_for('static', filename='img/svg/click.svg') }}" alt height="40" width="40"></div>
-        </div>
-        <div class="icontitle col-6 col-md-3 col-lg-2 align-items-end">
-          <a href="https://github.com/Mathonal"> <img src="{{ url_for('static', filename='img/github.png') }}" alt height="40" ></a>
-          <a href="https://www.linkedin.com/in/alexis-mathon-49989639/"> <img src="{{ url_for('static', filename='img/linkedin.png') }}" alt height="40" ></a>
-        </div>
-        <div class="card-img col-md-3 col-lg-2 d-none d-md-block"><img src="{{ url_for('static', filename='img/id1.png') }}" alt="id" style='border-radius: 15px;'></div>
-      </div>
-
+    <!-- BODY SECTION  -->
 
     {% block content %}{% endblock %}
 
+    <!-- ============  -->
 
     <footer class="text-center">
         <div class="footer-below">
-            <div class="container">
+            <div class="container blocgenerique">
                 <div class="row">
                     <div class="col-lg-12">
-                        <a href="https://github.com/celine-m-s/flask_test_app" class="btn-social btn-outline" target="_blank"><span class="sr-only">Github</span><i class="fa fa-fw fa-github"></i></a>
-                        <hr class="star-light">
-                        <span class="italic">Copyright &copy; <a href="https://www.linkedin.com/in/alexis-mathon-49989639/" target="_blank">Alexis Mathon</a></span></p>
+                        <p><a href="https://github.com/Mathonal"> <img src="{{ url_for('static', filename='img/github.png') }}" alt height="40" ></a>
+                        <a href="https://www.linkedin.com/in/alexis-mathon-49989639/"> <img src="{{ url_for('static', filename='img/linkedin.png') }}" alt height="40" ></a>
+                        </p>
+                        <p><span class="italic">Copyright &copy; <a href="https://www.linkedin.com/in/alexis-mathon-49989639/" target="_blank">Alexis Mathon</a></span></p>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- JQUERY SCRIPT  -->
+    <!-- JQUERY SCRIPT  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>  -->
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
   </body>
 
 </html>

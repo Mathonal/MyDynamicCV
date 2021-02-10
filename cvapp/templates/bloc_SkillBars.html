@@ -1,0 +1,39 @@
+<!-- SECTION 2 : Grille COMPETENCES  -->
+<div class="container blocgenerique">
+  <section class="row">
+
+    {% if type=='Data' %}
+      <div class="row col-12 pb-2 mt-2">
+        <div class="icontitle col-md-1 d-none d-md-block"> <img src="{{ url_for('static', filename='img/svg/project-diagram.svg') }}" alt height="40" width="40"></div>
+        <div><h2> Compétences Data Analyse </h2> </div>
+      </div>
+    {% elif type=='Eng' %}
+      <div class="row col-12 pb-2 mt-2">
+        <div class="icontitle col-md-1 d-none d-md-block"> <img src="{{ url_for('static', filename='img/svg/users-cog.svg') }}" alt height="40" width="40"></div>
+        <div><h2> Compétences Ingénierie </h2> </div>
+      </div>
+    {% elif type=='Dev' %}
+      <div class="row col-12 pb-2 mt-2">
+        <div class="icontitle col-md-1 d-none d-md-block"> <img src="{{ url_for('static', filename='img/svg/file-code.svg') }}" alt height="40" width="40"></div>
+        <div>
+        <h2> Compétences Développement </h2></div>
+      </div>
+    {% endif %}
+
+    {% for comp in tcomplist %}
+
+       <div class="col-md-6">
+            <h3 class="progress-title">{{comp.name}} - {{comp.percentvalue}}%</h3>
+            <div class="progress">
+                <div class="progress-bar 
+                {% if comp.percentvalue > 75 %} progress-bar-clear 
+                {% else %} progress-bar-info  
+
+                {% endif %} progress-bar-striped active" style="width:{{comp.percentvalue}}%"></div>
+            </div>
+        </div>
+
+    {% endfor %}
+    
+  </section>
+</div>

@@ -1,0 +1,72 @@
+    <!-- SECTION PRINCIPALE PESENTATION  -->
+    <div class="container blocgenerique">
+      <section class="row" style="height: 55px;"> </section><!-- Empty box  -->
+      <!-- part 1 : PRESENTATION  -->
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 mt-50 border-bottom border-white">
+        <div class="col-6 col-md-8 nametitle"><h1><strong>Alexis Mathon</strong></h1>
+          <h2> 
+              {% if type == 'Data' %} <span class="badge badge-danger"><strong>Data Analyst</strong></span> {% else %} <a href="/CVdata">Data Analyst</a> {% endif %}/
+              {% if type == 'Dev' %} <span class="badge badge-warning"><strong>Développeur</strong></span> {% else %} <a href="/CVdev">Développeur</a> {% endif %}/ 
+              {% if type == 'Eng' %} <span class="badge badge-info"><strong>Ingénieur</strong></span> {% else %} <a href="/CVeng">Ingénieur</a> {% endif %}
+          </h2>
+          <div class="icontitle col-md-1 d-none d-md-block"> <img src="{{ url_for('static', filename='img/svg/click.svg') }}" alt height="40" width="40"></div>
+        </div>
+        <div class="icontitle col-6 col-md-3 col-lg-2 align-items-end">
+          <a href="https://github.com/Mathonal"> <img src="{{ url_for('static', filename='img/github.png') }}" alt height="40" ></a>
+          <a href="https://www.linkedin.com/in/alexis-mathon-49989639/"> <img src="{{ url_for('static', filename='img/linkedin.png') }}" alt height="40" ></a>
+        </div>
+        <div class="card-img col-md-3 col-lg-2 d-none d-md-block"><img src="{{ url_for('static', filename='img/id1.png') }}" alt="id" style='border-radius: 15px;'></div>
+      </div>
+
+        <!-- SECTION 1 part 2 : texte presentation   -->
+        {% if type=='Data' %}
+        <div class="row d-flex col-lg-12 pb-2 mb-3">
+            <div class="text-center">
+                <p><h5><strong>Certification professionnelle n°3067 : BigData et processus décisionnel</strong></h5><br>
+                Je suis familiarisé avec le règlement général sur la protection des données <strong>(RGPD)</strong>, ainsi que les méthodes de projet <strong>AGILE</strong>.</p>
+                <p>Cela me permet d’être pertinent dans les processus de <strong>récoltes, nettoyages, intégrations/stockages et analyses de données</strong>,<br>
+                mais surtout de créer des <strong>Data visualisations et Dashboard</strong> pertinents.<br><br>
+                Enfin, mon expérience en <strong>Data-mining</strong> dans l'ingénierie et mon <strong>autoformation aux outils d'intelligence artificielle</strong> me permet d'avoir un pied en Data-Science. 
+                </p>
+            </div>
+        </div>
+
+      {% endif %}
+      
+      {% if type=='Dev' %}
+        <div class="row d-flex col-lg-12 pb-2 mb-3">
+            <div class="text-center">
+                <p> Je pratique le codage et l'algorithmie depuis ma formation d'ingénieur : le besoin de passerelles de données / parseurs / excels automatisés à toujours existé en simulation numérique.<br>
+
+                Mes languages de prédilection sont <strong>Python</strong> (en lien avec la data science) et <strong>.net/VB</strong> (plusieurs développements à mon actif en ingénierie)<br><br>
+
+                J'aime apprendre de nouveaux languages ; <br>mes prochains objectifs sont <strong>R</strong> (pour la data science) et <strong>Js React </strong>(pour améliorer l'aspect interface utilisateur / APIs & webbing en général)<br><br>
+
+                Dernièrement, je développe mes compétences sur <strong>MicrosoftAzureCloud</strong>, les GUI sous Python (developpement d'apps), et le Web design (pour améliorer les reportings Data)
+                </p>
+            </div>
+        </div>
+
+      {% endif %}
+      
+      {% if type=='Eng' %}
+      <div class="row d-flex col-lg-12 pb-2 mb-3">
+            <div class="text-center">
+            </div>
+        </div>
+
+      {% endif %}
+
+      {% if type=='All' %}
+        <div class="row d-flex col-lg-12 pb-2 mb-3">
+            <div class="text-center">
+                <p>D’origine ingénieur mécanique, ma carrière et mon appétit de connaissances m’ont poussés vers l’analyse de données et le développement informatique. Avec le temps,</p> <h5><strong>Data Analyse / Développement / Ingénierie</strong><br> sont devenus mes cœurs de compétences.</h5>
+                <p>Cela me permet d’être pertinent dans chaque métier, mais surtout de créer des passerelles puisqu’aucun domaine ne se suffit plus à lui-même.<br><br>
+                Ces pages vous donneront un aperçu de ce que je suis.<br>
+                Elles sont conçues via <strong>FLASK/Python/Bootstrap</strong> pour la partie WebDesign, avec <strong>base SQL</strong> pour l'affichage dynamique, versionné via <strong>GitHub</strong> et mises à disposition via <strong>Microsoft Azure Cloud Services</strong>.
+                </p>
+            </div>
+        </div>
+
+      {% endif %}
+      </div>

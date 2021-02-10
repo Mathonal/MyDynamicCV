@@ -125,23 +125,23 @@ def init_compglobdb():
     # Data
     db.session.add(CompGlob("Python Advanced", WorkClass['Data'],
         "Développement objets & exploratoire (Jupyter) ; structures avancées / factorisation ; APIs",
-        ""))
+        "img/thumb/pythoncode.png"))
 
-    db.session.add(CompGlob("Maitrise librairies Data-Science", WorkClass['Data'],
-        "Pandas ; Numpy ; SciKit Tensorflow ; Matplotlib SeaBorn",
-        ""))
+    db.session.add(CompGlob("Maitrise librairies Data-Science : Machine learning / Deep learning", WorkClass['Data'],
+        "Pandas ; Numpy ; SciKit ; Keras-Tensorflow ; Matplotlib SeaBorn ; Statsmodels",
+        "img/thumb/net_ml.png"))
 
-    db.session.add(CompGlob("Maitrise des outils BigData", WorkClass['Data'],
+    db.session.add(CompGlob("Maitrise des outils ETL (Extract, Transform, and Load)", WorkClass['Data'],
         "Pipeline ETL / Dataflow ; Création de sets de données ordonnées à partir de DataLake (Spark,Sql,NoSql)",
-        ""))
+        "img/thumb/ETL_talend.png"))
 
     db.session.add(CompGlob("Data Visualisation", WorkClass['Data'],
-        "Dashboard & Data story sous Tableau/Python/HTML reporting",
-        ""))
+        "Dashboard & Data story sous Tableau/Python plotli/HTML-pdf reporting",
+        "img/thumb/dashboard.png"))
 
-    db.session.add(CompGlob("Maitrise outils Machine learning / Deep learning", WorkClass['Data'],
-        "Dashboard & Data story sous Tableau/Python/HTML reporting",
-        ""))
+    db.session.add(CompGlob("Maitrise outils stockage et traitement BIGDATA", WorkClass['Data'],
+        "Environnement stockage Hadoop, Calculs distribués avec Spark, Datawarehouse avec Hive",
+        "img/thumb/spark.png"))
 
 def init_db():
     logging.warning('repopulating SQLDB')

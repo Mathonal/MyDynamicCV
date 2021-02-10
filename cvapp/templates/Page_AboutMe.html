@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ 
+      <!-- SECTION 1 part 2 : texte presentation   -->
+      {% include 'bloc_presentation.html' %}
+
+      <!-- SECTION 2 : Grille COMPETENCES  -->
+      {% if tcomplist: %}
+        {% include 'bloc_SkillBars.html' %}
+      {% endif %}
+
+      <!-- SECTION : Compétences globales   -->
+      {% if gcomplist: %}
+        {% include 'skillglobal.html' %}
+      {% endif %}
+
+      <!-- SECTION : Grille Experiences -->
+      {% if type == 'All' %}
+        {% include 'bloc_JobHistory.html' %}
+      {% endif %}
+
+      <!-- SECTION4 : Missions spécifiques  -->
+      {% include 'bloc_XpTable.html' %}
+      <!-- SECTION5 : PERSONNEL / Formulaire/adresse  -->
+      {% include 'bloc_persocontact.html' %}
+
+{% endblock %}

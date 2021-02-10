@@ -52,7 +52,8 @@ def create_app():
     with app.app_context():
         #RESET DB in dev env
         if SQLPOPULATE_AT_STARTUP and not herokuflag : 
-            models.init_db()
+            from .models import init_db
+            init_db()
 
         # blueprint for auth routes in our app
         from .views import routes as routes_blueprint
@@ -60,5 +61,5 @@ def create_app():
 
         # others blueprints for app
         # ...
-        
+
         return app
