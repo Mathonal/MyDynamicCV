@@ -3,15 +3,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-        <section class="row" style="height: 80px;"> </section><!-- Empty box  -->
-        <!-- SECTION 1 part 2 : texte presentation   -->
+    <section class="row text-center" style="height: 80px;"> </section><!-- Empty box  -->
+    <!-- SECTION 1 part 2 : texte presentation   -->
+    <div class="container col titlecontainer">
+    <div class="col-lg-12 bigtitle"><h1 class="bigtitle"><strong>Little Big Data Mine</strong></h1></div>
+    <div class="col"><h2 class="bigtitle"><strong>Let's Dig Deep and Learn</strong></h2></div>
+    </div>
+    <!-- SECTION 2 : Grille COMPETENCES  -->
+    {% include 'bloc_ProjectsCards.html' %}
+    <!-- SECTION : Compétences globales   -->
 
-      <!-- SECTION 2 : Grille COMPETENCES  -->
-      {% include 'bloc_ProjectsCards.html' %}
-      <!-- SECTION : Compétences globales   -->
-
-      <!-- SECTION5 : PERSONNEL / Formulaire/adresse  -->
-      <!--{% include 'bloc_persocontact.html' %}-->
+    <!-- SECTION5 : PERSONNEL / Formulaire/adresse  -->
+    <!--{% include 'bloc_persocontact.html' %}-->
 
 
 {% endblock %}

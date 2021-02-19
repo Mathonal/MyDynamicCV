@@ -4,9 +4,9 @@
       <div class="row col-12 pb-2 mt-2">
         <div class="icontitle col-md-1 d-none d-md-block"> <img src="{{ url_for('static', filename='img/svg/users-cog.svg') }}" alt height="40" width="40"></div>
         {% if type == 'All' %}
-        <div class="col-md-11"><h2> Compétences transverses </h2> </div>
+        <div class="col-md-11"><h2> Compétences du consultant </h2> </div>
         {% else %}
-        <div class="col-md-11"><h2> Compétences générales </h2> </div>
+        <div class="col-md-11"><h2> Compétences lié au domaine </h2> </div>
         {% endif %}
       </div>
       <div class="container">
@@ -21,7 +21,8 @@
           <p class="card-text">
             {{comp.short}}
           </p>
-          <p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>1000<i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
+          <!--<p class="card-text"><small class="text-muted"><i class="fas fa-eye"></i>8ans++ expériences <i class="far fa-user"></i>admin<i class="fas fa-calendar-alt"></i>Jan 20, 2018</small></p>
+          <p class="card-text"> Pratique : 8ans++ </p>-->
         </div>
         </a>
       </div>

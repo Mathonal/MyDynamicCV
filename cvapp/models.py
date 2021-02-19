@@ -101,8 +101,7 @@ def init_compglobdb():
         "Etre capable de rédiger et dispenser des formations. Transmettre ses compétences",
         "img/formation.jpg"))
 
-    # Specific comp
-    # Ing
+    # Specific comp : Ing
     db.session.add(CompGlob("Expertise CATIA/CAO", WorkClass['Eng'],
         "Etre capable de faire de la conception rejouable; Squeleton/topdown method. \
         Inclusion de règles/vérifications de conception (Knowledge); surfacique avancée",
@@ -121,8 +120,7 @@ def init_compglobdb():
          Data-Mining & Regression ; Insight paramètres principaux & effet de couplage ",
         "img/surfacereponse.png"))
 
-    # Specific comp
-    # Data
+    # Specific comp : Data
     db.session.add(CompGlob("Python Advanced", WorkClass['Data'],
         "Développement objets & exploratoire (Jupyter) ; structures avancées / factorisation ; APIs",
         "img/thumb/pythoncode.png"))
@@ -142,6 +140,21 @@ def init_compglobdb():
     db.session.add(CompGlob("Maitrise outils stockage et traitement BIGDATA", WorkClass['Data'],
         "Environnement stockage Hadoop, Calculs distribués avec Spark, Datawarehouse avec Hive",
         "img/thumb/spark.png"))
+    
+    # Specific comp : Dev
+    db.session.add(CompGlob("Maitrise la programmation objet", WorkClass['Dev'],
+        "Realisation de plusieurs projets (professionnel & personnel) reposant sur l'utilisation et la manipulation de classes & heritage",
+        ""))
+    db.session.add(CompGlob("Maîtrise les outils de Content Management System & Framework", WorkClass['Dev'],
+        "Essentiel pour une bonne maitrise de sa configuration, accélerer faciliter son projet avec des outils spécialisés. \
+        J'ai principalement travaillé avec les framework .NET, Anaconda Flask Jupyter Project pour le python, Bootstrap et Bulma pour le CSS",
+        ""))
+    db.session.add(CompGlob("Maîtrise des outils de versionnement (GIT) et industrialisation (Docker/Cloud-Plateforme)", WorkClass['Dev'],
+        "Publie régulièrement des mises à jours de mes projets GIThub lié à des web App PaaS/IaaS, ainsi que les évolutions de mes containers",
+        ""))
+    db.session.add(CompGlob("Maîtrise des concepts de debugging - test associés à un developpement", WorkClass['Dev'],
+        "Publie régulièrement des mises à jours de mes projets GIThub lié à des web App PaaS/IaaS, ainsi que les évolutions de mes containers",
+        ""))    
 
 def init_db():
     logging.warning('repopulating SQLDB')

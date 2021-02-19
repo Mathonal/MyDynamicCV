@@ -5,18 +5,27 @@
 {% block content %}
     <section class="row" style="height: 50px;"> </section><!-- Empty box  -->
     <!-- SECTION Titre Image   -->
-    <div class="container blocgenerique text-center">
-        <div class="col-md-11 "><h1> Nom Article </h1> </div>
-        <img src="{{ url_for('static', filename='img/thumb/basics_ml.png') }}" alt="Card image cap">
+    <div class="container blocgenerique text-center" style="background-color: transparent;">
+        <div class="col-md-11 "><h1 class= "bigtitle"><strong>Nom Article</strong></h1> </div>
+
+          <div class="card center " style="width: 80%;">
+            <div class="card-img-wrapper">
+              <img src="{{ url_for('static', filename='img/thumb/basics_ml.png') }}" alt="Card image cap">
+            </div>
+          </div>
+        </div>
+
+
     </div>
       <!-- SECTION 2 : Grille COMPETENCES  -->
     <div class="container blocgenerique">
     <section class="row text-center">
       <div class="row col-12 pb-2 mt-2">
-        <div class="col-md-11 text-center"><h2> Titre de partie </h2> </div>
+        <div class="col-md-11 text-center"><h2><strong> Titre de partie </strong></h2> </div>
       </div>
       <div class="container">
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!</p>
+
         <img class="text-center" src="{{ url_for('static', filename='img/thumb/basics_ml.png') }}" alt="Card image cap">
         <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque commodi debitis eaque explicabo fuga maiores necessitatibus, neque omnis optio vel!</p>
       </div>

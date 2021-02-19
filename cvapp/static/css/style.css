@@ -33,6 +33,10 @@ body {
 	padding-top: 1rem;padding-bottom: 1rem;margin-top : 1rem;margin-bottom: 1rem;
 }
 
+.titlecontainer {
+  padding-top: 5rem;padding-bottom: 5rem;margin-top : 2rem;margin-bottom: 2rem;
+}
+
 .hidden {
   display: none;
   visibility: hidden;
@@ -46,11 +50,6 @@ body {
 caption {caption-side: top; color: inherit; }
 
 /* FONTS */
-.nametitle h2 {
-  font-family: "Squada One", sans-serif;
-  color: black;
-} 
-
 table {
   font-family: "Roboto", sans-serif;
   color: white;
@@ -64,7 +63,20 @@ h1, h2, h3, h4, h5 {
 p {
   font-family: "Roboto", sans-serif;}
 
+.bigtitle {
+  font-family: "Squada One", sans-serif;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 300%;
+  text-align: center;
+} 
 
+.nametitle {
+  font-family: "Squada One", sans-serif;
+  color: black;
+} 
 
 /* ============CARD WRAPPERS =========   */
 .card-wrapper {
@@ -169,8 +181,8 @@ body {
 .progress{
     height: 20px;
     background: #fff;
-    border-top: 5px solid #1c2647;
-    border-bottom: 5px solid #1c2647;
+    border-top: 3px solid #1c2647;
+    border-bottom: 3px solid #1c2647;
     border-radius: 0;
     margin-bottom: 25px;
     overflow: visible;
@@ -179,16 +191,16 @@ body {
 .progress:before,
 .progress:after{
     content: "";
-    width: 5px;
+    width: 3px;
     background: #1c2647;
     position: absolute;
     top: 0;
-    left: -5px;
+    left: -2px;
     bottom: 0;
 }
 .progress:after{
     left: auto;
-    right: -5px;
+    right: -2px;
 }
 .progress .progress-bar{
     border: none;
