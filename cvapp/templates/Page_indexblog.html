@@ -1,0 +1,77 @@
+{% set type='all' %}
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="row text-center" style="height: 80px;"> </section><!-- Empty box  -->
+    <!-- SECTION 1 part 2 : texte presentation   -->
+    <div class="container col titlecontainer">
+    <div class="col-lg-12 bigtitle"><h1 class="bigtitle"><strong>Little Big Data Mine</strong></h1></div>
+    <div class="col"><h2 class="bigtitle"><strong>Let's Dig Deep and Learn</strong></h2></div>
+    </div>
+    <!-- SECTION 2 : Grille COMPETENCES  -->
+<!-- SECTION : Compétences globales   -->
+<div class="container blocgenerique">
+  <section class="row">
+    <!-- TITRE  -->
+    <div class="row col-12 pb-2 mt-2">
+        <div class="icontitle col-md-1 d-none d-md-block"> <img src="{{ url_for('static', filename='img/svg/users-cog.svg') }}" alt height="40" width="40"></div>
+        <div class="col-md-11"><h2> MY LAST WRITINGS </h2> </div>
+    </div>
+    <div class="row col-12 pb-2 mt-2">
+        <div class="col-md-11"><p><strong> <span class="badge badge-info">Disclaimer</span> This section is fairly new and prone to change as I write from new projects/ideas and scrap from older ones. I will create categories as the need rises.</strong></p> </div>
+    </div>
+    <!-- CARDS  -->
+    <div class="container">
+      <div class="row">
+
+        <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
+          <div class="card">
+            <a href="/blog/JupiterNotebookDockerContainer">
+            <div class="card-img-wrapper">
+              <img class="card-img-top" src="{{ url_for('static', filename='img/thumb/docker.png') }}" alt="Card image cap">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+              <span class="badge badge-warning"><strong>Dev</strong></span>
+              Easily Setup Docker Container and environnement for DataScience with JupiterNotebook</h5>
+              <div class="card-content">
+                <p class="card-text"> How to install and use docker (tutorial), how to setup and launch your own customized container (jupiter notebook in this example), and how to automate launch with Aliases (on linux)</p>
+              </div>
+            </div>
+            </a>
+          </div>
+        </div>
+
+
+        {% if showdev %}
+        <div class="card-wrapper col-lg-4 col-md-6 col-xs-12">
+          <div class="card">
+            <a href="/blog/myblogtest">
+            <div class="card-img-wrapper">
+              <img class="card-img-top" src="{{ url_for('static', filename='img/thumb/php-code-1242330-640x480.jpg') }}" alt="Card image cap">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">
+              <span class="badge badge-warning"><strong>Dev</strong></span>
+              Test page to adjust CSS3 to markdown syntaxe</h5>
+              <div class="card-content">
+                <p class="card-text"> try out to display static HTML page from a Markdown file type : easier for redaction</p>
+              </div>
+            </div>
+            </a>
+          </div>
+        </div>
+        {% endif %}
+
+      </div>
+    </div>
+  </section>
+</div>
+    <!-- SECTION : Compétences globales   -->
+
+    <!-- SECTION5 : PERSONNEL / Formulaire/adresse  -->
+    <!--{% include 'bloc_persocontact.html' %}-->
+
+
+{% endblock %}

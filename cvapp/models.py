@@ -74,7 +74,7 @@ class CompGlob(db.Model):
 
 def init_compglobdb():
     #MULTI COMP
-    db.session.add(CompGlob("Audit de Processus", WorkClass['DataDevEng'],
+    db.session.add(CompGlob("Audit / Receuil de besoins", WorkClass['DataDevEng'],
         "Comprendre et analyser avec précision les besoins d'un client. \
         Realiser des spécifications techniques détaillées.",
         "img/processus.png"))
@@ -83,6 +83,11 @@ def init_compglobdb():
         "Verifier la capacité des outils à remplir un besoin client; \
         en chiffrer l'installation / l'exécution.",
         "img/faisabilite.png"))
+
+    db.session.add(CompGlob("Organisation et conduite de réunions", WorkClass['DataDevEng'],
+        "Maitriser les différents types de réunions (revue, échange, résolution), \
+        adapter ses ordres du jours, et avoir des objectifs clairs",
+        "img/reunion.png"))
 
     db.session.add(CompGlob("Pilotage projet", WorkClass['DataDevEng'],
         "Suivre le développement d'une application ou l'exécution d'une étude",
@@ -101,6 +106,7 @@ def init_compglobdb():
         "Etre capable de rédiger et dispenser des formations. Transmettre ses compétences",
         "img/formation.jpg"))
 
+
     # Specific comp : Ing
     db.session.add(CompGlob("Expertise CATIA/CAO", WorkClass['Eng'],
         "Etre capable de faire de la conception rejouable; Squeleton/topdown method. \
@@ -108,7 +114,8 @@ def init_compglobdb():
         "img/catia.jpg"))
 
     db.session.add(CompGlob("Expertise Conception additive", WorkClass['Eng'],
-        "Utilisation et interprétation d'optimisation topologique sur volume de conception",
+        "Utilisation et interprétation d'optimisation topologique sur volume de conception. Interpretation de résultats, \
+        prise en comptes de contraintes de conception. Rédaction/présentation de DataStories sur campagne de calculs",
         "img/topologicaloptim.png"))
 
     db.session.add(CompGlob("Expertise optimisation paramétrique", WorkClass['Eng'],
@@ -117,8 +124,10 @@ def init_compglobdb():
 
     db.session.add(CompGlob("Data Mining", WorkClass['Eng'],
         "Exploration de domaine (Plan d'expériences) ; Choix d'algorithme de calculs & paramètres;\
-         Data-Mining & Regression ; Insight paramètres principaux & effet de couplage ",
+         Data-Mining & Regression ; Insight paramètres principaux & effet de couplage ; Statistique inférentielle \
+         & probabilités de mise en défaut de pièces",
         "img/surfacereponse.png"))
+
 
     # Specific comp : Data
     db.session.add(CompGlob("Python Advanced", WorkClass['Data'],
@@ -126,15 +135,25 @@ def init_compglobdb():
         "img/thumb/pythoncode.png"))
 
     db.session.add(CompGlob("Maitrise librairies Data-Science : Machine learning / Deep learning", WorkClass['Data'],
-        "Pandas ; Numpy ; SciKit ; Keras-Tensorflow ; Matplotlib SeaBorn ; Statsmodels",
+        "Appliquer des algorithmes exploratoires et statistiques descriptives, \
+        choix et utilisation des bibliothèques d’algorithmes d'IA issues \
+        de solutions de références pour appliquer des modèles de qualification/projections/prédictions. \
+        (Jupyterlab; Pandas ; Numpy ; SciKit ; Keras-Tensorflow ; Matplotlib SeaBorn ; Statsmodels",
         "img/thumb/net_ml.png"))
 
     db.session.add(CompGlob("Maitrise des outils ETL (Extract, Transform, and Load)", WorkClass['Data'],
-        "Pipeline ETL / Dataflow ; Création de sets de données ordonnées à partir de DataLake (Spark,Sql,NoSql)",
+        "Création de Pipeline ETL / Dataflow a partir de sources multiples et hétérogènes (Talend) ;\
+        Contrôle des paradigmes de l’ingestion et du streaming de données. (Talend/Kafka)",
         "img/thumb/ETL_talend.png"))
 
-    db.session.add(CompGlob("Data Visualisation", WorkClass['Data'],
-        "Dashboard & Data story sous Tableau/Python plotli/HTML-pdf reporting",
+    db.session.add(CompGlob("Charger, qualifier, nettoyer les données structurées ou non structurées", WorkClass['Data'],
+        " Création de sets de données structurées et DataWarehouse à partir de DataLake (Python, Spark)",
+        "img/thumb/datacleaning.png"))
+
+
+    db.session.add(CompGlob("Restituer des données - Data Visualisation", WorkClass['Data'],
+        "Dashboard & Data story sous logiciel dédié Tableau / powerBI ou via developpement web via \
+        Framework Flask/Python plotli. Reporting statique via HTML-pdf",
         "img/thumb/dashboard.png"))
 
     db.session.add(CompGlob("Maitrise outils stockage et traitement BIGDATA", WorkClass['Data'],
@@ -144,17 +163,17 @@ def init_compglobdb():
     # Specific comp : Dev
     db.session.add(CompGlob("Maitrise la programmation objet", WorkClass['Dev'],
         "Realisation de plusieurs projets (professionnel & personnel) reposant sur l'utilisation et la manipulation de classes & heritage",
-        ""))
+        "img/thumb/poo.png"))
     db.session.add(CompGlob("Maîtrise les outils de Content Management System & Framework", WorkClass['Dev'],
         "Essentiel pour une bonne maitrise de sa configuration, accélerer faciliter son projet avec des outils spécialisés. \
-        J'ai principalement travaillé avec les framework .NET, Anaconda Flask Jupyter Project pour le python, Bootstrap et Bulma pour le CSS",
-        ""))
+        framework .NET, Anaconda Flask JupyterLab pour le python, Bootstrap et Bulma pour le CSS",
+        "img/thumb/framework.png"))
     db.session.add(CompGlob("Maîtrise des outils de versionnement (GIT) et industrialisation (Docker/Cloud-Plateforme)", WorkClass['Dev'],
         "Publie régulièrement des mises à jours de mes projets GIThub lié à des web App PaaS/IaaS, ainsi que les évolutions de mes containers",
-        ""))
-    db.session.add(CompGlob("Maîtrise des concepts de debugging - test associés à un developpement", WorkClass['Dev'],
+        "img/thumb/gitdocker.png"))
+    db.session.add(CompGlob("Maîtrise des concepts de debugging - tests associés à un developpement", WorkClass['Dev'],
         "Publie régulièrement des mises à jours de mes projets GIThub lié à des web App PaaS/IaaS, ainsi que les évolutions de mes containers",
-        ""))    
+        "img/thumb/testDD.png"))    
 
 def init_db():
     logging.warning('repopulating SQLDB')

@@ -18,7 +18,7 @@ if herokuflag :
     logging.debug('Cloud environment')
 else : logging.debug('Local environment')
 
-# GET var from .env
+# GET var from .env (only in localdev)
 SQLPOPULATE_AT_STARTUP = True if os.getenv('SQLPOPULATE_AT_STARTUP') == 'True' else False
 
 def register_extensions(app):
@@ -61,5 +61,9 @@ def create_app():
 
         # others blueprints for app
         # ...
+
+        # try out of several markdown libs
+        from flaskext.markdown import Markdown
+        Markdown(app)
 
         return app

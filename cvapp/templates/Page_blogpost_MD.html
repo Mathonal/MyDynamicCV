@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="row" style="height: 50px;"> </section><!-- Empty box  -->
+    <!-- SECTION Titre Image   -->
+    <div class="container blocgenerique text-center" style="background-color: transparent;">
+
+
+          <div class="card center " style="width: 80%;">
+            <div class="card-img-wrapper">
+              <img src="{{ url_for('static', filename=blogimgpath) }}" alt="Card image cap">
+            </div>
+          </div>
+        <div class="col-md-11 "><h1 class= "bigtitle"><strong>{{blogtitle}}</strong></h1> </div>
+        </div>
+
+      <!-- SECTION 2 : Grille COMPETENCES  -->
+    <div class="container blocgenerique">
+    <section class="row text-center">
+      <div class="container blogmd">
+        {{textmd|safe}}
+      </div>
+    </section>
+</div>
+      <!-- SECTION : Compétences globales   -->
+
+      <!-- SECTION5 : PERSONNEL / Formulaire/adresse  -->
+      <!--{% include 'bloc_persocontact.html' %}-->
+
+
+{% endblock %}

@@ -2,6 +2,16 @@ from flask import Flask, render_template, url_for
 from flask import Blueprint
 
 from .utils import find_tcomp,find_gcomp
+import os
+import mistune
+
+
+def rootdir() : 
+    return os.path.abspath(os.path.dirname(__file__))
+
+def showdev() :
+    if os.getenv('ISHEROKU') : return False
+    else : return True
 
 # Blueprint
 routes = Blueprint('routes', __name__,
@@ -22,8 +32,34 @@ def index():
 
 # BLOG PAGE
 @routes.route('/blog/')
-def blogtest() : return render_template('Page_Post.html')
+def blogindex() :   
+    return render_template('Page_indexblog.html', showdev = showdev())
 
+@routes.route('/blog/myblogtest')
+def blogtestpage() : 
+    blogtitle = 'Test page'
+    blogimgpath = 'img/thumb/pythoncode.png'
+
+    # markdown file path (cvapp folder) 
+    path = os.path.join(rootdir(),"templates/blog/Markdowntest.md")
+    # get file content
+    textmd = open(path, "r").read()
+    # transform in HTML (with mistune) and return 
+    return render_template('TestPage_blogpost_MD.html', textmd = mistune.html(textmd),
+        blogtitle = blogtitle, blogimgpath = blogimgpath)
+
+@routes.route('/blog/JupiterNotebookDockerContainer')
+def blogpage1() :
+    blogtitle = 'Easily Setup Docker Container and environnement \
+        for DataScience with JupiterNotebook'
+    blogimgpath = 'img/blog/jupyterdocker_intro.png'
+
+    # MD FILE
+    path = os.path.join(rootdir(),"templates/blog/JupyterDockerImage.md")
+    textmd = open(path, "r").read()
+    # transform in HTML (with mistune) and return 
+    return render_template('Page_blogpost_MD.html', textmd = mistune.html(textmd),
+        blogtitle = blogtitle, blogimgpath = blogimgpath)
 
 # ABOUT ME SECTION 
 def rendercv(Wkclass):

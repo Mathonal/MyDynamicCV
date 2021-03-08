@@ -78,6 +78,54 @@ p {
   color: black;
 } 
 
+/* ============ blog css test =========   */
+
+.blogmd {
+  text-align: justify;
+}
+
+.blogmd strong{
+  font-weight: bold;
+}
+
+.blogmd h1, h2, h3, h4, h5 {
+  /*font-family: "Open Sans", sans-serif;*/
+  font-family: "Oswald", sans-serif;
+  /*color: white;*/
+  font-weight: bold;
+}
+
+.blogmd h2 {
+  /*font-family: "Open Sans", sans-serif;*/
+  color: #006666;
+  font-weight: bold;
+}
+
+.blogmd blockquote {
+  border-left: 3px solid black;
+  padding-left: 1rem;
+}
+
+.blogmd pre, code {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+
+}
+
+.blogmd pre {
+  padding: .5rem;
+  line-height: 1.25;
+  overflow-x: scroll;
+
+  background-color: #aea8a8;
+  /*text-indent: 20px;*/
+}
+
+.blogmd code {
+  /* color : #5b3ee8;*/
+  font-weight: bold;
+}
+
+
 /* ============CARD WRAPPERS =========   */
 .card-wrapper {
   margin-bottom: 30px;
