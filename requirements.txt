@@ -1,6 +1,7 @@
 # MANDATORY
 gunicorn
-mistune
+mistune==2.0.0rc1
+Flask-Markdown
 python-dotenv
 #
 flask
