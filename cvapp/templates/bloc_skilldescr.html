@@ -14,7 +14,7 @@
       {% for comp in gcomplist %}
 
       <div class="card">
-        <a href="#">
+        <!--<a href="#">-->
         <img class="card-img-top" {% if comp.img!=None: %} src="{{url_for('static', filename=comp.img) }}") {% endif %} alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{comp.name}}</h5>

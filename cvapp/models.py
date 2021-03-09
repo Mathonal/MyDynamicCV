@@ -128,6 +128,16 @@ def init_compglobdb():
          & probabilités de mise en défaut de pièces",
         "img/surfacereponse.png"))
 
+    db.session.add(CompGlob("Développement industriel", WorkClass['Eng'],
+        "Développement d'outils d'automatisation ou intégration de règles métiers, d'outils de stockage/synchronisation,\
+         développement de plateformes de visualisation / interfaces",
+        "img/descriptif3d.jpg"))
+
+    db.session.add(CompGlob("Développement méthodes", WorkClass['Eng'],
+        "Etude, mise en place de méthodologies de conceptions/calculs selon besoin clients/BE \
+        & rédaction/conduite de formation",
+        "img/processus.png"))
+
 
     # Specific comp : Data
     db.session.add(CompGlob("Python Advanced", WorkClass['Data'],
@@ -173,7 +183,7 @@ def init_compglobdb():
         "img/thumb/gitdocker.png"))
     db.session.add(CompGlob("Maîtrise des concepts de debugging - tests associés à un developpement", WorkClass['Dev'],
         "Publie régulièrement des mises à jours de mes projets GIThub lié à des web App PaaS/IaaS, ainsi que les évolutions de mes containers",
-        "img/thumb/testDD.png"))    
+        "img/thumb/testDD.png"))
 
 def init_db():
     logging.warning('repopulating SQLDB')

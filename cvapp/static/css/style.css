@@ -20,7 +20,7 @@
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Open Sans", "Roboto", sans-serif;
   color: white;
   background-image: url("../img/green-computer.jpg");background-size: cover;
   /*background-color: red;*/
@@ -61,7 +61,8 @@ h1, h2, h3, h4, h5 {
 }
 
 p {
-  font-family: "Roboto", sans-serif;}
+  font-family: "Open Sans", "Sofia-pro", "Roboto", sans-serif;}
+
 
 .bigtitle {
   font-family: "Squada One", sans-serif;
