@@ -1,5 +1,6 @@
 # MANDATORY
 gunicorn
+mistune
 python-dotenv
 #
 flask
