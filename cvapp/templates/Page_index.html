@@ -9,12 +9,14 @@
     <div class="col-lg-12 bigtitle"><h1 class="bigtitle"><strong>Little Big Data Mine</strong></h1></div>
     <div class="col"><h2 class="bigtitle"><strong>Let's Dig Deep and Learn</strong></h2></div>
     </div>
+
     <!-- SECTION 2 : Grille COMPETENCES  -->
     {% include 'bloc_CardsProjects.html' %}
     <!-- SECTION : Compétences globales   -->
-
+    {% if showdev %}
+        {% include 'test/TestPage_Card_layout.html' %}
     <!-- SECTION5 : PERSONNEL / Formulaire/adresse  -->
     <!--{% include 'bloc_persocontact.html' %}-->
-
+    {% endif %}
 
 {% endblock %}

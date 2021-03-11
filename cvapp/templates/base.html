@@ -26,7 +26,7 @@
   <body>
     <!-- BARRE DE NAVIGATION   -->
     <nav class="navbar fixed-top navbar-expand navbar-dark bg-dark justify-content-between flex-md-nowrap m-0">
-        <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="">ALEXIS MATHON</a>
+        <a class="navbar-brand col-sm-3 col-md-2 mr-0 hidden-mobile" href="">ALEXIS MATHON</a>
         <ul class="nav navbar-nav col-auto ">
           <li class="nav-item active"> <a class="nav-link" href="/index">HOME<span class="sr-only">(current)</span></a> </li>
           
@@ -55,7 +55,8 @@
             <div class="container blocgenerique">
                 <div class="row">
                     <div class="col-lg-12">
-                        <p><a href="https://github.com/Mathonal"> <img src="{{ url_for('static', filename='img/github.png') }}" alt height="40" ></a>
+                        <p><a href="https://github.com/Mathonal"> <img src="{{ url_for('static', filename='img/github.png') }}" alt height="40" ></a> 
+                              
                         <a href="https://www.linkedin.com/in/alexis-mathon-49989639/"> <img src="{{ url_for('static', filename='img/linkedin.png') }}" alt height="40" ></a>
                         </p>
                         <p><span class="italic">Copyright &copy; <a href="https://www.linkedin.com/in/alexis-mathon-49989639/" target="_blank">Alexis Mathon</a></span></p>

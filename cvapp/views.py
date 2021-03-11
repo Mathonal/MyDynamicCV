@@ -25,12 +25,15 @@ routes = Blueprint('routes', __name__,
 @routes.route('/index/')
 def index():
 
-    gcomplist = find_gcomp('DataDevEng')
+    #gcomplist = find_gcomp('DataDevEng')
 
     return render_template('Page_index.html',
-                            gcomplist=gcomplist)
+                            showdev = showdev())
 
-# BLOG PAGE
+    return render_template('Page_index.html',
+                            gcomplist=gcomplist, showdev = showdev())
+
+# BLOG PAGES
 @routes.route('/blog/')
 def blogindex() :   
     return render_template('Page_indexblog.html', showdev = showdev())
@@ -45,7 +48,7 @@ def blogtestpage() :
     # get file content
     textmd = open(path, "r").read()
     # transform in HTML (with mistune) and return 
-    return render_template('TestPage_blogpost_MD.html', textmd = mistune.html(textmd),
+    return render_template('test/TestPage_blogpost_MD.html', textmd = mistune.html(textmd),
         blogtitle = blogtitle, blogimgpath = blogimgpath)
 
 @routes.route('/blog/JupiterNotebookDockerContainer')
@@ -58,7 +61,7 @@ def blogpage1() :
     path = os.path.join(rootdir(),"templates/blog/JupyterDockerImage.md")
     textmd = open(path, "r").read()
     # transform in HTML (with mistune) and return 
-    return render_template('Page_blogpost_MD.html', textmd = mistune.html(textmd),
+    return render_template('Page_blogpostmarkdown_template.html', textmd = mistune.html(textmd),
         blogtitle = blogtitle, blogimgpath = blogimgpath)
 
 # ABOUT ME SECTION 

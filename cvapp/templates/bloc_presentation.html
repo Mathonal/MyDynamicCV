@@ -3,13 +3,19 @@
       <section class="row" style="height: 55px;"> </section><!-- Empty box  -->
       <!-- part 1 : PRESENTATION  -->
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 mt-50 border-bottom border-white">
-        <div class="col-6 col-md-8 nametitle"><h1><strong>Alexis Mathon</strong></h1>
-          <h2> 
-              {% if type == 'Data' %} <span class="badge badge-danger"><strong>Data Analyst</strong></span> {% else %} <a href="/CVdata">Data Analyst</a> {% endif %}/
-              {% if type == 'Dev' %} <span class="badge badge-warning"><strong>Développeur</strong></span> {% else %} <a href="/CVdev">Développeur</a> {% endif %}/ 
-              {% if type == 'Eng' %} <span class="badge badge-info"><strong>Ingénieur</strong></span> {% else %} <a href="/CVeng">Ingénieur</a> {% endif %}
-          </h2>
-          <div class="icontitle col-md-1 d-none d-md-block"> <img src="{{ url_for('static', filename='img/svg/click.svg') }}" alt height="40" width="40"></div>
+        <div class="col-6 col-md-8 nametitle">
+            <h2><strong>Alexis Mathon</strong></h2>
+            <h3> 
+              {% if type == 'Data' %} <span class="badge badge-danger"><strong>Data Analyst</strong></span> 
+              {% else %} <a href="/CVdata" class="btn btn-primary btn-lg">Data Analyst</a> {% endif %}
+              
+              {% if type == 'Dev' %} <span class="badge badge-warning"><strong>Développeur</strong></span> 
+              {% else %} <a href="/CVdev" class="btn btn-primary btn-lg">Développeur</a> {% endif %} 
+              
+              {% if type == 'Eng' %} <span class="badge badge-info"><strong>Ingénieur</strong></span> 
+              {% else %} <a href="/CVeng" class="btn btn-primary btn-lg">Ingénieur</a> {% endif %}
+            </h3>
+            <div class="icontitle col-md-1 d-none d-md-block"> <img src="{{ url_for('static', filename='img/svg/click.svg') }}" alt height="40" width="40"></div>
         </div>
         <div class="icontitle col-6 col-md-3 col-lg-2 align-items-end">
           <a href="https://github.com/Mathonal"> <img src="{{ url_for('static', filename='img/github.png') }}" alt height="40" ></a>

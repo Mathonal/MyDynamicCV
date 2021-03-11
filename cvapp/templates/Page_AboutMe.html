@@ -7,21 +7,21 @@
 
       <!-- SECTION 2 : Grille COMPETENCES  -->
       {% if tcomplist: %}
-        {% include 'bloc_SkillBars.html' %}
+        {% include 'bloc_skillbars.html' %}
       {% endif %}
 
       <!-- SECTION : Compétences globales   -->
       {% if gcomplist: %}
-        {% include 'bloc_skilldescr.html' %}
+        {% include 'bloc_skilldetails.html' %}
       {% endif %}
 
       <!-- SECTION : Grille Experiences -->
       {% if type == 'All' %}
-        {% include 'bloc_JobHistory.html' %}
+        {% include 'bloc_jobhistory.html' %}
       {% endif %}
 
       <!-- SECTION4 : Missions spécifiques  -->
-      {% include 'bloc_XpTable.html' %}
+      {% include 'bloc_xptable.html' %}
       <!-- SECTION5 : PERSONNEL / Formulaire/adresse  -->
       {% include 'bloc_persocontact.html' %}
 
